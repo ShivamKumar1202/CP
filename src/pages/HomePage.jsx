@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Search } from "lucide-react";
-import RecipeCard from '../components/RecipeCard';
+import MachineCard from '../components/MachineCard';
 import { getRandomColor } from '../lib/utils';
 
 const APP_ID =  import.meta.env.VITE_APP_ID;
@@ -84,7 +84,7 @@ const HomePage = () => {
                     ) : (
                            
                             recipes.slice(0, 0).map(({ recipe }, index) => (
-                                <RecipeCard key={index} recipe={recipe} {...getRandomColor()} />
+                                <MachineCard key={index} recipe={recipe} {...getRandomColor()} />
                             ))
                         )
                     }

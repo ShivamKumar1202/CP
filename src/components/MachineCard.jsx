@@ -2,7 +2,7 @@ import { Soup,Heart, HeartPulse } from 'lucide-react'
 import { useState } from 'react';
 
 
-function RecipeCard({recipe, bg, badge}) {
+function MachineCard({recipe, bg, badge}) {
 
     const healthLabels = [recipe.healthLabels[0], recipe.healthLabels[1] ];
     const [isFavourite, setIsFavourite] = useState(localStorage.getItem('favourites')?.includes(recipe.label) );
@@ -73,4 +73,4 @@ function RecipeCard({recipe, bg, badge}) {
   )
 }
 
-export default RecipeCard
+export default MachineCard
