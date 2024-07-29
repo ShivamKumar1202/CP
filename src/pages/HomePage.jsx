@@ -11,7 +11,6 @@ const HomePage = () => {
     const [recipes, setRecipes] = useState([]);
     const [loading, setLoading] = useState(true);
 
-
     const fetchRecipes = async (searchQuery) => {
         setLoading(true);
         setRecipes([]);
@@ -83,7 +82,7 @@ const HomePage = () => {
 
                     ) : (
                            
-                            recipes.slice(0, 0).map(({ recipe }, index) => (
+                            recipes.slice(0, 3).map(({ recipe }, index) => (
                                 <MachineCard key={index} recipe={recipe} {...getRandomColor()} />
                             ))
                         )
