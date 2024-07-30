@@ -2,14 +2,14 @@ import { Soup,Heart, HeartPulse } from 'lucide-react'
 import { useState } from 'react';
 
 
-function MachineCard({machine, bg, badge}) {
+function MachineCard4({machine, bg, badge}) {
 
     return (
     <div className={`flex flex-col rounded-md ${bg} overflow-hidden p-3 relative`}>
         <a href="#" className='relative h-50'>
            
            <div className='skeleton absolute inset-0' />    {/* Display a skeleton in case of slow loading*/}
-            <img src='/core-composer.jpg' alt="machine image"
+            <img src='/glue spreader.webp' alt="machine image"
                 className='rounded-md w-full h-full object-cover cursor-pointer opacity-0 transition-opacity duration-500'
                 onLoad={(e) => {
                     e.currentTarget.style.opacity = 1;      // show the image once it loads
@@ -20,7 +20,7 @@ function MachineCard({machine, bg, badge}) {
         </a>
 
         <div className='flex mt-1'>
-            <p className='font-bold tracking-wide'> Core Composer </p>
+            <p className='font-bold tracking-wide'> Glue Spreader </p>
         </div>
         <div className='flex mt-1'>
             <p className='font-bold tracking-wide'> Efficiency </p>
@@ -48,4 +48,4 @@ function MachineCard({machine, bg, badge}) {
   )
 }
 
-export default MachineCard
+export default MachineCard4

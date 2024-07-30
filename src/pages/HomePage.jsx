@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react'
 import { Search } from "lucide-react";
 import MachineCard from '../components/MachineCard';
+import MachineCard1 from '../components/MachineCard1';
+import MachineCard2 from '../components/MachineCard2';
+import MachineCard3 from '../components/MachineCard3';
+import MachineCard4 from '../components/MachineCard4';
+import MachineCard5 from '../components/MachineCard5';
 import { getRandomColor } from '../lib/utils';
 
 const APP_ID =  import.meta.env.VITE_APP_ID;
@@ -8,64 +13,23 @@ const APP_KEY = import.meta.env.VITE_APP_KEY;
 
 
 const HomePage = () => {
-    const [recipes, setRecipes] = useState([]);
+ // const [machines, setMachines] = useState([]);
     const [loading, setLoading] = useState(true);
-
-    const fetchRecipes = async (searchQuery) => {
-        setLoading(true);
-        setRecipes([]);
-
-        try {
-            const response = await fetch(`https://api.edamam.com/api/recipes/v2/?app_id=${APP_ID}&app_key=${APP_KEY}&q=${searchQuery}&type=public`);
-            const data = await response.json();
-            console.log(data);
-            setRecipes(data.hits);
-            console.log(recipes);
-
-        } catch(error) {
-            console.log(error.message);
-
-        } finally {
-            setLoading(false);
-
-        }
-
-    }
-
-    useEffect( () => {
-
-        let searchItems = ["Chicken", "Fish", "Paneer", "Helthy", "Continental", "Italian"];
-        let index = Math.floor(Math.random() * searchItems.length);
-        console.log("Search item:" + searchItems[index]);
-        fetchRecipes(searchItems[index]);
-        }, []);
-        
-        const handleSearchRecipe = (e) => {
-            e.preventDefault();     // its default is refresh, we dont want to refresh
-            fetchRecipes(e.target[0].value);
-        };
-
+  
+    setTimeout(()=>{ setLoading(false) }, 1500);
+  
+    const machines = [1,2,3,4,5,6];
+  
   return (
     <div className='bg-[#faf9fb] p-10 flex-1'>  
     {/* flex-1 makes it so that the homepage occupies all the remaining width after sidebar, sdebar has fixed with */}
         <div className='max-w-screen-lg mx-auto'>   
-            {/* Search Bar
-            <form onSubmit={handleSearchRecipe}>
-                <label className='input shadow-md flex items-center gap-2'>
-                    <Search size={'24'}/>
-                    <input type='text' 
-                        className='text-sm md:text-md grow'
-                        placeholder='Search'
-                    />
-                </label>
-            </form> */}
 
             <h1 className='font-bold text-3xl md:text-5xl mt-4'>
                 Machinery
             </h1>
-            <p className='text-slate-500 font-semibold ml-1 my-2 text-sm tracking-tight'>
-                {/* Popular Choices */}
-            </p>
+            <br/>
+            <br/>
             <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
 					{loading ? 
 						(
@@ -82,14 +46,22 @@ const HomePage = () => {
 
                     ) : (
                            
-                            recipes.slice(0, 3).map(({ recipe }, index) => (
-                                <MachineCard key={index} recipe={recipe} {...getRandomColor()} />
+                            machines.slice(0,1).map(({ machine }, index) => (
+                                <>
+                                    <MachineCard  machine={machine} {...getRandomColor()} />
+                                    <MachineCard1 machine={machine} {...getRandomColor()} />
+                                    <MachineCard2 machine={machine} {...getRandomColor()} />
+                                    <MachineCard3 machine={machine} {...getRandomColor()} />
+                                    <MachineCard4 machine={machine} {...getRandomColor()} />
+                                    <MachineCard5 machine={machine} {...getRandomColor()} />
+                                </>
                             ))
                         )
                     }
 				</div>
 			</div>
-		</div>  );
+		</div>  
+    );
        
 }
 
