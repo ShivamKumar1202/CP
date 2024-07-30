@@ -51,7 +51,7 @@ const MobileSidebar = () => {
                 </Link>
                 
                 
-                <Link to={"/favourites"}>
+                <Link to={"/about"}>
                     <Building2 size={"24"} className='cursor-pointer'/>
                 </Link>
                 
