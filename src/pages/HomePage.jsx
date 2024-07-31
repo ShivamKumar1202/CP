@@ -1,53 +1,12 @@
 import { useState, useEffect } from 'react'
 import MachineCard from '../components/MachineCard';
-import { getRandomColor } from '../lib/utils';
+import { getRandomColor, machines } from '../lib/utils';
 
 const HomePage = () => {
  // const [machines, setMachines] = useState([]);
     const [loading, setLoading] = useState(true);
   
     setTimeout(()=>{ setLoading(false) }, 1500);
-  
-    const machines = [
-        {
-            image : '/core-composer.jpg',
-            name : 'Core Composer',
-            efficiency : '85',
-            consumption : '100'
-        },
-        
-        {
-            image : '/boiler.png',
-            name : 'Thermic Fluid Heater',
-            efficiency : '85',
-            consumption : '100'
-        },
-        {
-            image : '/cold press.jpg',
-            name : 'Cold Press',
-            efficiency : '85',
-            consumption : '100'
-        },
-        {
-            image : '/dryer.png',
-            name : 'Dryer',
-            efficiency : '85',
-            consumption : '100'
-        },
-        {
-            image : '/glue spreader.webp',
-            name : 'Glue Spreader',
-            efficiency : '85',
-            consumption : '100'
-        },
-        {
-            image : '/hot press.jpg',
-            name : 'Core Composer',
-            efficiency : '85',
-            consumption : '100'
-        },
-        
-    ];
   
   return (
     <div className='bg-[#faf9fb] p-10 flex-1'>  
@@ -73,8 +32,7 @@ const HomePage = () => {
                                 </div>
                             ))
 
-                    ) : (
-                           
+                    ) : (                           
                             machines.map((machine , index) => (
                                     <MachineCard key={index} machine={machine} {...getRandomColor()} />
                                 
@@ -89,7 +47,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-
-// WBS, calibrator, labelling, peeling, DD saw, seasoning chamber
-// remove glue spreader
