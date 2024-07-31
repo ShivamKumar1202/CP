@@ -1,16 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Search } from "lucide-react";
 import MachineCard from '../components/MachineCard';
-import MachineCard1 from '../components/MachineCard1';
-import MachineCard2 from '../components/MachineCard2';
-import MachineCard3 from '../components/MachineCard3';
-import MachineCard4 from '../components/MachineCard4';
-import MachineCard5 from '../components/MachineCard5';
 import { getRandomColor } from '../lib/utils';
-
-const APP_ID =  import.meta.env.VITE_APP_ID;
-const APP_KEY = import.meta.env.VITE_APP_KEY;
-
 
 const HomePage = () => {
  // const [machines, setMachines] = useState([]);
@@ -18,7 +8,46 @@ const HomePage = () => {
   
     setTimeout(()=>{ setLoading(false) }, 1500);
   
-    const machines = [1,2,3,4,5,6];
+    const machines = [
+        {
+            image : '/core-composer.jpg',
+            name : 'Core Composer',
+            efficiency : '85',
+            consumption : '100'
+        },
+        
+        {
+            image : '/boiler.png',
+            name : 'Thermic Fluid Heater',
+            efficiency : '85',
+            consumption : '100'
+        },
+        {
+            image : '/cold press.jpg',
+            name : 'Cold Press',
+            efficiency : '85',
+            consumption : '100'
+        },
+        {
+            image : '/dryer.png',
+            name : 'Dryer',
+            efficiency : '85',
+            consumption : '100'
+        },
+        {
+            image : '/glue spreader.webp',
+            name : 'Glue Spreader',
+            efficiency : '85',
+            consumption : '100'
+        },
+        {
+            image : '/hot press.jpg',
+            name : 'Core Composer',
+            efficiency : '85',
+            consumption : '100'
+        },
+        
+    ];
   
   return (
     <div className='bg-[#faf9fb] p-10 flex-1'>  
@@ -46,14 +75,10 @@ const HomePage = () => {
 
                     ) : (
                            
-                            machines.slice(0,1).map(({ machine }, index) => (
+                            machines.map((machine , index) => (
                                 <>
-                                    <MachineCard  machine={machine} {...getRandomColor()} />
-                                    <MachineCard1 machine={machine} {...getRandomColor()} />
-                                    <MachineCard2 machine={machine} {...getRandomColor()} />
-                                    <MachineCard3 machine={machine} {...getRandomColor()} />
-                                    <MachineCard4 machine={machine} {...getRandomColor()} />
-                                    <MachineCard5 machine={machine} {...getRandomColor()} />
+                                    <MachineCard key={index} machine={machine} {...getRandomColor()} />
+                                   
                                 </>
                             ))
                         )
@@ -66,3 +91,7 @@ const HomePage = () => {
 }
 
 export default HomePage
+
+
+// WBS, calibrator, labelling, peeling, DD saw, seasoning chamber
+// remove glue spreader

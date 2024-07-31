@@ -9,7 +9,7 @@ function MachineCard({machine, bg, badge}) {
         <a href="#" className='relative h-50'>
            
            <div className='skeleton absolute inset-0' />    {/* Display a skeleton in case of slow loading*/}
-            <img src='/core-composer.jpg' alt="machine image"
+            <img src= {machine.image} alt="machine image"
                 className='rounded-md w-full h-full object-cover cursor-pointer opacity-0 transition-opacity duration-500'
                 onLoad={(e) => {
                     e.currentTarget.style.opacity = 1;      // show the image once it loads
@@ -20,13 +20,13 @@ function MachineCard({machine, bg, badge}) {
         </a>
 
         <div className='flex mt-1'>
-            <p className='font-bold tracking-wide'> Core Composer </p>
+            <p className='font-bold tracking-wide'> Machine : {machine.name} </p>
         </div>
         <div className='flex mt-1'>
-            <p className='font-bold tracking-wide'> Efficiency </p>
+            <p className='font-bold tracking-wide'> Efficiency : {machine.efficiency} %</p>
         </div>
         <div className='flex mt-1'>
-            <p className='font-bold tracking-wide'> Energy Consumption </p>
+            <p className='font-bold tracking-wide'> Energy Consumption : {machine.consumption} kV</p>
         </div>
       
         <p className='my-2'>
