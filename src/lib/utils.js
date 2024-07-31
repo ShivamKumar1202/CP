@@ -61,7 +61,7 @@ export const machines = [
 	},
 	{
 		image : '/hot press.jpg',
-		name : 'Labelling Machine',
+		name : 'Hot Press',
 		efficiency : '85',
 		consumption : '100'
 	},
@@ -72,17 +72,18 @@ export const machines = [
 		consumption : '100'
 	},
 	{
+		image : '/seasoning.jpg',
+		name : 'Seasoning Chamber',
+		efficiency : '85',
+		consumption : '100'
+	},
+	{
 		image : '/DDSAW.jpg',
 		name : 'DD Saw',
 		efficiency : '85',
 		consumption : '100'
 	},
-	{
-		image : '/seasoning.jpg',
-		name : 'Seasoning Chamber',
-		efficiency : '85',
-		consumption : '100'
-	}
+	
 	
 ];
 

@@ -26,11 +26,11 @@ function MachineCard({machine, bg, badge}) {
             <p className='font-bold tracking-wide'> Efficiency : {machine.efficiency} %</p>
         </div>
         <div className='flex mt-1'>
-            <p className='font-bold tracking-wide'> Energy Consumption : {machine.consumption} kV</p>
+            <p className='font-bold tracking-wide'> Energy Consumption : {machine.consumption} kW</p>
         </div>
       
         <p className='my-2'>
-            M1
+            {/* M1 */}
         </p>
 
         <div className='flex gap-2 mt-auto'>
