@@ -76,10 +76,8 @@ const HomePage = () => {
                     ) : (
                            
                             machines.map((machine , index) => (
-                                <>
                                     <MachineCard key={index} machine={machine} {...getRandomColor()} />
-                                   
-                                </>
+                                
                             ))
                         )
                     }
