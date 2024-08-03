@@ -25,63 +25,62 @@ export const machines = [
 	{
 		image : '/core-composer.jpg',
 		name : 'Core Composer',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '75',
+		consumption : '20'
 	},
 	{
 		image : '/boiler.png',
 		name : 'Thermic Fluid Heater',
-		efficiency : '85',
+		efficiency : '80',
 		consumption : '100'
 	},
 	{
 		image : '/cold press.jpg',
 		name : 'Cold Press',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '75',
+		consumption : '13'
 	},
 	{
 		image : '/dryer.png',
 		name : 'Dryer',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '70',
+		consumption : '25'
 	},
 	{
 		image : '/peeling.jpg', 
 		name : 'Peeling Machine',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '80',
+		consumption : '44'
 	},
-	
 	{
 		image : '/WBS.jpg',
 		name : 'Wide Belt Sander',
 		efficiency : '85',
-		consumption : '100'
+		consumption : '17'
 	},
 	{
 		image : '/hot press.jpg',
 		name : 'Hot Press',
 		efficiency : '85',
-		consumption : '100'
+		consumption : '72'
 	},
 	{
 		image : '/Calibrator.jpg',
 		name : 'Calibrator',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '80',
+		consumption : '10'
 	},
 	{
 		image : '/seasoning.jpg',
 		name : 'Seasoning Chamber',
-		efficiency : '85',
-		consumption : '100'
+		efficiency : '75',
+		consumption : '15'
 	},
 	{
 		image : '/DDSAW.jpg',
 		name : 'DD Saw',
 		efficiency : '85',
-		consumption : '100'
+		consumption : '32.5'
 	},
 	
 	
